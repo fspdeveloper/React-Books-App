@@ -1,0 +1,245 @@
+/* .container{
+  width: 100%;
+  height: auto
+} */
+
+.row {
+  margin-left: 1rem;
+}
+
+.offset-1 {
+   margin-left: 4.333333%; 
+}
+
+.display-4 {
+  color: #FFF;
+  font-weight: bold
+}
+
+.ui.card, .ui.cards>.card {
+  max-width: 100%;
+  position: relative;
+  flex-direction: column;
+  width: 20rem;
+  min-height: 0;
+  background: #fff;
+  padding: 0;
+  border: none;
+  border-radius: none;
+  
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+  padding: 1.2rem 1rem;
+}
+
+
+.ui.card {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.ui.card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform: translateY(-1.5rem) scale(1.0);
+  transition: transform 1s;
+}
+
+
+.header {
+  margin-top: 0.6em;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.price-box {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.currency {
+  font-size: 2rem;
+  position: relative;
+  top: -25px;
+  letter-spacing: 0px
+}
+
+/* Material Button ------------------------------- */
+.btn-group btn {
+  border-radius: 10px
+}
+
+.edit-btn:hover, .edit-btn:focus {
+  background-color: #17a2b8;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(23, 184, 184, 0.712);
+  background-color: #17a2b8;
+  color: #ecf0f1;
+  transition: background-color .3s;
+   box-shadow: 0 7px 14px rgba(23, 184, 184, 0.712), 0 5px 5px rgb(98, 89, 80);
+  box-shadow: 0 7px 14px rgba(200, 7, 7, 0.507), 
+  0 5px 5px rgb(98, 89, 80);
+}
+
+.delete-btn:hover, .delete-btn:focus {
+  background-color: #DD2C00;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(200, 7, 7, 0.6);
+  background-color: #DD2C00;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  box-shadow: 0 7px 14px rgba(23, 184, 184, 0.712), 0 5px 5px rgb(98, 89, 80);
+ 
+}
+
+.submit-btn:hover, .submit-btn:focus {
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(21, 132, 184, 0.555);
+  color: #ecf0f1;
+  transition                                                     : background-color .3s;
+  box-shadow: 0 7px 14px rgba(106, 107, 107, 0.712), 0 5px 5px rgb(98, 89, 80);
+ 
+}
+
+.btn-mb{
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-mb:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin-left: -60px;
+  margin-top: -60px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 100%;
+  transform: scale(0);
+}
+
+@keyframes btn-mb {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+.btn-mb:not(:active):after {
+  animation: btn-bm 0.6s ease-out;
+}
+
+.btn-mb:after {
+  visibility: hidden;
+}
+
+.btn-mb:focus:after {
+  visibility: visible;
+}
+
+
+/* Material form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #757575;
+}
+input:focus{ outline:none; outline-offset: 2px; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+
+

@@ -1,0 +1,19 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  font-family: sans-serif;
+  background-image: linear-gradient(to right bottom, rgba(5, 213, 240, 0.322), rgba(43, 219, 160, 0.5)),url(https://www.oomphinc.com/wp-content/uploads/2009/03/coder-coding-at-laptop-web.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  min-height: 100%
+  
+}
+
+html{
+  height: 500px;
+}
+
+
