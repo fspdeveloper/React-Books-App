@@ -12,7 +12,6 @@ class Books extends Component {
         });
     
     }
-   
 
     render(){
 
