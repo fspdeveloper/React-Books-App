@@ -2,7 +2,6 @@ import React,{Component} from 'react'
 
 import Book from './Book.jsx'
 
-
 class Books extends Component {
 
     state={search: ''}
