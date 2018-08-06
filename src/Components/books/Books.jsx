@@ -11,7 +11,7 @@ class Books extends Component {
         this.setState({
             search: event.target.value
         });
-       
+    
     }
    
 
@@ -28,7 +28,7 @@ class Books extends Component {
         return (
 
             <div>
-                <div className="container py-3" >
+                <div className="container py-3">
                     <div className="input-group input-group-lg">
                     <div className="input-group-prepend">
                     <span className="input-group-text" id="inputGroup-sizing-lg">Search...</span>

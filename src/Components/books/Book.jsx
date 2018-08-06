@@ -19,7 +19,7 @@ class Book extends Component {
     backButtonHandler = (event) => {
         event.preventDefault()
         this.setState({
-            editable: false
+                editable: false
         })
         
     }
@@ -109,6 +109,7 @@ class Book extends Component {
                     </div>
                     <div className="">
                     <button onClick={this.editDataHandler} className="btn btn-success btn-block btn-mb submit-btn">Save</button>
+                    <button onClick={this.backButtonHandler} className="btn btn-secondary btn-block btn-mb submit-btn">back</button>
                     </div>
                 </form>
 
@@ -127,12 +128,9 @@ class Book extends Component {
                     <hr />
                     <h4 className="price-box"><span className="currency">$</span>{this.state.book.price}</h4>
                     <div className="extra content card-footer">
-                    <span className="right floated">
-                    <button onClick={this.buttonClickHandler} type="button" className="btn btn-outline-info btn-mb edit-btn">Edit <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M2 12.88V16h3.12L14 7.12 10.88 4 2 12.88zm14.76-8.51c.33-.33.33-.85 0-1.18l-1.95-1.95c-.33-.33-.85-.33-1.18 0L12 2.88 15.12 6l1.64-1.63z"/></svg></button>
-                    </span>
                     <span>
-                    <button onClick={this.deletedBook} type="button" className="btn btn-outline-danger btn-mb delete-btn "> 
-                    Delete <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
+                    <button onClick={this.buttonClickHandler} type="button" className="btn btn-info btn-block btn-mb edit-btn"> Edit <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path d="M2 12.88V16h3.12L14 7.12 10.88 4 2 12.88zm14.76-8.51c.33-.33.33-.85 0-1.18l-1.95-1.95c-.33-.33-.85-.33-1.18 0L12 2.88 15.12 6l1.64-1.63z"/></svg></button>
+                    <button onClick={this.deletedBook} type="button" className="btn btn-danger btn-block btn-mb delete-btn "> Delete <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg></button>
                     </span>
                 
                     </div>
